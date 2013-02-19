@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repos/kausvn/db02/!svn/ver/1342/FTAS/jira-plugins/otrMessageHandler/src/main/java/ru/otr/plugins/messagehandler
+END
+AdvCreateIssueHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/repos/kausvn/db02/!svn/ver/1342/FTAS/jira-plugins/otrMessageHandler/src/main/java/ru/otr/plugins/messagehandler/AdvCreateIssueHandler.java
+END
+EditCreateSubTask.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/repos/kausvn/db02/!svn/ver/1342/FTAS/jira-plugins/otrMessageHandler/src/main/java/ru/otr/plugins/messagehandler/EditCreateSubTask.java
+END
+AddCommentToIssue.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/repos/kausvn/db02/!svn/ver/1342/FTAS/jira-plugins/otrMessageHandler/src/main/java/ru/otr/plugins/messagehandler/AddCommentToIssue.java
+END
+CreateOrComment.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/repos/kausvn/db02/!svn/ver/1342/FTAS/jira-plugins/otrMessageHandler/src/main/java/ru/otr/plugins/messagehandler/CreateOrComment.java
+END
+EditAddCommentToIssue.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/repos/kausvn/db02/!svn/ver/1342/FTAS/jira-plugins/otrMessageHandler/src/main/java/ru/otr/plugins/messagehandler/EditAddCommentToIssue.java
+END
+CreateSubTask.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/repos/kausvn/db02/!svn/ver/1342/FTAS/jira-plugins/otrMessageHandler/src/main/java/ru/otr/plugins/messagehandler/CreateSubTask.java
+END

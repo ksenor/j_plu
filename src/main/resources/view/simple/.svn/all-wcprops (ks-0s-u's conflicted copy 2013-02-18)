@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repos/kausvn/db02/!svn/ver/1342/FTAS/jira-plugins/otrMessageHandler/src/main/resources/view/simple
+END
+checkbox.vm
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repos/kausvn/db02/!svn/ver/1342/FTAS/jira-plugins/otrMessageHandler/src/main/resources/view/simple/checkbox.vm
+END
+textfield.vm
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repos/kausvn/db02/!svn/ver/1342/FTAS/jira-plugins/otrMessageHandler/src/main/resources/view/simple/textfield.vm
+END
+select.attrs.vm
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/repos/kausvn/db02/!svn/ver/1342/FTAS/jira-plugins/otrMessageHandler/src/main/resources/view/simple/select.attrs.vm
+END
+userselect.vm
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repos/kausvn/db02/!svn/ver/1342/FTAS/jira-plugins/otrMessageHandler/src/main/resources/view/simple/userselect.vm
+END
+select.vm
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repos/kausvn/db02/!svn/ver/1342/FTAS/jira-plugins/otrMessageHandler/src/main/resources/view/simple/select.vm
+END

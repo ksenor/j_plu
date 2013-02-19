@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repos/kausvn/db02/!svn/ver/1342/FTAS/jira-plugins/otrMessageHandler/src/main/java/ru/otr/plugins
+END
+UserValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/kausvn/db02/!svn/ver/1342/FTAS/jira-plugins/otrMessageHandler/src/main/java/ru/otr/plugins/UserValidator.java
+END
+IssueKeyValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repos/kausvn/db02/!svn/ver/1342/FTAS/jira-plugins/otrMessageHandler/src/main/java/ru/otr/plugins/IssueKeyValidator.java
+END
+CFValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repos/kausvn/db02/!svn/ver/1342/FTAS/jira-plugins/otrMessageHandler/src/main/java/ru/otr/plugins/CFValidator.java
+END
+IssueTypeValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repos/kausvn/db02/!svn/ver/1342/FTAS/jira-plugins/otrMessageHandler/src/main/java/ru/otr/plugins/IssueTypeValidator.java
+END

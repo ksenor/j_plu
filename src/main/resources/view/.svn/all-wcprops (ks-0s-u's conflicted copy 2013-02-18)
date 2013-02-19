@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repos/kausvn/db02/!svn/ver/1342/FTAS/jira-plugins/otrMessageHandler/src/main/resources/view
+END
+editCreateSubTaskHandlerDetails.vm
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/repos/kausvn/db02/!svn/ver/1342/FTAS/jira-plugins/otrMessageHandler/src/main/resources/view/editCreateSubTaskHandlerDetails.vm
+END
+printGlobalErrors.vm
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repos/kausvn/db02/!svn/ver/1342/FTAS/jira-plugins/otrMessageHandler/src/main/resources/view/printGlobalErrors.vm
+END
+accessKeys.vm
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repos/kausvn/db02/!svn/ver/1342/FTAS/jira-plugins/otrMessageHandler/src/main/resources/view/accessKeys.vm
+END
+editAddCommentToIssuenHandlerDetails.vm
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/repos/kausvn/db02/!svn/ver/1342/FTAS/jira-plugins/otrMessageHandler/src/main/resources/view/editAddCommentToIssuenHandlerDetails.vm
+END
+editCreateOrCommentHandlerDetails.vm
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/repos/kausvn/db02/!svn/ver/1342/FTAS/jira-plugins/otrMessageHandler/src/main/resources/view/editCreateOrCommentHandlerDetails.vm
+END

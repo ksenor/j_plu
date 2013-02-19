@@ -1,0 +1,12 @@
+#*
+# action
+# auiparams.name
+# auiparams.label2
+# auiparams.description
+# auiparams.value
+# auiparams.required
+*#
+#parse("/view/formfields/aui.vm")
+#parse("/view/formfields/normalHeader.vm")
+#parse("/view/simple/checkbox.vm")
+#parse("/view/formfields/normalFooter.vm")

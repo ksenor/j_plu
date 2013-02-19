@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repos/kausvn/db02/!svn/ver/1342/FTAS/jira-plugins/otrMessageHandler/src/main/resources/view/formfields
+END
+checkbox.vm
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/repos/kausvn/db02/!svn/ver/1342/FTAS/jira-plugins/otrMessageHandler/src/main/resources/view/formfields/checkbox.vm
+END
+normalFooter.vm
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/repos/kausvn/db02/!svn/ver/1342/FTAS/jira-plugins/otrMessageHandler/src/main/resources/view/formfields/normalFooter.vm
+END
+textfield.vm
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/kausvn/db02/!svn/ver/1342/FTAS/jira-plugins/otrMessageHandler/src/main/resources/view/formfields/textfield.vm
+END
+aui.vm
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repos/kausvn/db02/!svn/ver/1342/FTAS/jira-plugins/otrMessageHandler/src/main/resources/view/formfields/aui.vm
+END
+userselect.vm
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repos/kausvn/db02/!svn/ver/1342/FTAS/jira-plugins/otrMessageHandler/src/main/resources/view/formfields/userselect.vm
+END
+select.vm
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repos/kausvn/db02/!svn/ver/1342/FTAS/jira-plugins/otrMessageHandler/src/main/resources/view/formfields/select.vm
+END
+normalHeader.vm
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/repos/kausvn/db02/!svn/ver/1342/FTAS/jira-plugins/otrMessageHandler/src/main/resources/view/formfields/normalHeader.vm
+END

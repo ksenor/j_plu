@@ -1,0 +1,7 @@
+#parse("/view/formfields/aui.vm")
+#parse("/view/formfields/normalHeader.vm")
+#if (!$auiparams.containsKey('class'))
+	#set ($auiparams.class = "text")
+#end
+#parse("/view/simple/textfield.vm")
+#parse("/view/formfields/normalFooter.vm")
