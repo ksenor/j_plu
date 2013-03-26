@@ -21,7 +21,7 @@
     <file path="$PROJECT_DIR$/.idea/misc.xml" changelist="539264c0-29e2-457c-99ab-8c6e55796b1c" time="1363860799775" ignored="false" />
     <file path="$PROJECT_DIR$/.idea/compiler.xml" changelist="539264c0-29e2-457c-99ab-8c6e55796b1c" time="1363860799775" ignored="false" />
     <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="539264c0-29e2-457c-99ab-8c6e55796b1c" time="1363868122121" ignored="false" />
-    <file path="/CreateOrComment.java" changelist="539264c0-29e2-457c-99ab-8c6e55796b1c" time="1364306244388" ignored="false" />
+    <file path="/CreateOrComment.java" changelist="539264c0-29e2-457c-99ab-8c6e55796b1c" time="1364308627190" ignored="false" />
     <file path="/AdvCreateIssueHandler.java" changelist="539264c0-29e2-457c-99ab-8c6e55796b1c" time="1364294586250" ignored="false" />
     <file path="/Dummy.txt" changelist="539264c0-29e2-457c-99ab-8c6e55796b1c" time="1363944950861" ignored="false" />
     <file path="$PROJECT_DIR$/../untitled/src/main.java" changelist="539264c0-29e2-457c-99ab-8c6e55796b1c" time="1364294959111" ignored="false" />
@@ -91,7 +91,7 @@
       <file leaf-file-name="CreateOrComment.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/otr/plugins/messagehandler/CreateOrComment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="127" column="36" selection-start="5294" selection-end="5294" vertical-scroll-proportion="0.7688356">
+            <state line="101" column="39" selection-start="4231" selection-end="4231" vertical-scroll-proportion="0.66780823">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -632,7 +632,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/otr/plugins/messagehandler/CreateOrComment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="127" column="36" selection-start="5294" selection-end="5294" vertical-scroll-proportion="0.7688356">
+        <state line="101" column="39" selection-start="4231" selection-end="4231" vertical-scroll-proportion="0.66780823">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

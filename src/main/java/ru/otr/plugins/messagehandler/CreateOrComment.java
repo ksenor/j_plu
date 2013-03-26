@@ -24,10 +24,7 @@ import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.mail.Address;
@@ -82,56 +79,57 @@ public class CreateOrComment extends AbstractMessageHandler {
                 throw new CreateException("Не найдены получатели письма из поля TO", e);
             }
 
-//            Address a1 = addresses[0];
-//
-//            Class cl = a1.getClass().getSuperclass();
-//            Method method;
-//            try {
-//                method = cl.getDeclaredMethod("getAddress");
-//            } catch (NoSuchMethodException e) {
-//                e.printStackTrace();
-//                throw new RuntimeException(e);
-//            }
-//            Object res = null;
-//            try {
-//                res = method.invoke(a1);
-//            } catch (IllegalAccessException e) {
-//                e.printStackTrace();
-//            } catch (InvocationTargetException e) {
-//                e.printStackTrace();
-//            }
-//
-//            System.out.println("Addr: " + res);
-
-           // if (addresses[0].getClass().isAssignableFrom(InternetAddress.class)  ) {
-                //InternetAddress internetAddress = (InternetAddress)addresses[0];
-              //  System.out.println("Address: [" + internetAddress.getAddress() + "]");
-           // }
-
-            String addressConcatenated = "";
+            Set<String> adrSet = null;
             for (int j=0; j<addresses.length; j++) {
-                addressConcatenated = addressConcatenated + "                                                          "
-                        + addresses[j].toString();
+                Address a1 = addresses[j];
+
+                Class cl = a1.getClass().getSuperclass();
+                Method method;
+                try {
+                    method = cl.getDeclaredMethod("getAddress");
+                } catch (NoSuchMethodException e) {
+                    e.printStackTrace();
+                    throw new RuntimeException(e);
+                }
+                Object res = null;
+                try {
+                    res = method.invoke(a1);
+                } catch (IllegalAccessException e) {
+                    e.printStackTrace();
+                } catch (InvocationTargetException e) {
+                    e.printStackTrace();
+                }
+
+                adrSet.add((String) res);
+                System.out.println("Addr: " + res);
             }
-            System.out.println(addressConcatenated);
-            Pattern pattern = Pattern.compile("<(.{1,100})>");
-            Matcher matcher = pattern.matcher(addressConcatenated);
-            String matched = null;
-            while (matcher.find()) {
-                matched = matcher.group(1);
-                System.out.println(matched);
+            System.out.println(adrSet);
+//            Pattern pattern = Pattern.compile("<(.{1,100})>");
+//            Matcher matcher = pattern.matcher(addressConcatenated);
+//            String matched = null;
+//            while (matcher.find()) {
+//                matched = matcher.group(1);
+//                System.out.println(matched);
 //                if (!helpdesk.contains(matched)) {
 //                    break;
 //                }
-            }
+//            }
 
-            if (!(matched == null)) {
-                i.setAssignee(UserUtils.getUserByEmail(matched));
-                return i;
-            } else {
-                i.setAssignee(issue.getProjectObject().getLead());
-                return i;
+            Iterator adrIt = adrSet.iterator();
+            while (adrIt.hasNext()) {
+                String adr = (String) adrIt.next();
+                System.out.println("Adr: " + adr);
+                System.out.println("AdrType" + adr.getClass().getName());
+                if (!(adr == null)) {
+                    i.setAssignee(UserUtils.getUserByEmail(adr));
+                    return i;
+                } else {
+                    i.setAssignee(i.getProjectObject().getLead());
+                    System.out.println("GetLead: " + i.getProjectObject().getLead() + "; " + i.getProjectObject().getLead().getClass().getName());
+                    return i;
+                }
             }
+            return i;
         }
 
         public ChangeItemBean createAttachment(File file, String string, String string1, User user, Issue issue) throws AttachmentException {
