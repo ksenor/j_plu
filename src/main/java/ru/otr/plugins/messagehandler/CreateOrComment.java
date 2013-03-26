@@ -48,7 +48,7 @@ public class CreateOrComment extends AbstractMessageHandler {
 
     public static class MyMessageHandlerContext implements MessageHandlerContext {
 
-        private Set<String> helpdesk;
+        private ArrayList<String> helpdesk;
         MessageHandlerContext mhc;
         Message message;
         Address[] addresses;
@@ -56,7 +56,7 @@ public class CreateOrComment extends AbstractMessageHandler {
         MyMessageHandlerContext(MessageHandlerContext mhc, Message message) {
             this.mhc = mhc;
             this.message = message;
-            helpdesk = new HashSet<String>(Arrays.asList(new String[]{"jira_test@otr.ru", "it@otr.ru", "helpdesk@otr.ru"}));
+            helpdesk = new ArrayList<String>(Arrays.asList(new String[]{"jira_test@otr.ru", "it@otr.ru", "helpdesk@otr.ru"}));
         }
 
         public User createUser(String string, String string1, String string2, String string3, Integer intgr) throws PermissionException, CreateException {
@@ -79,7 +79,7 @@ public class CreateOrComment extends AbstractMessageHandler {
                 throw new CreateException("Не найдены получатели письма из поля TO", e);
             }
 
-            Set<String> adrSet = null;
+            Set<Object> adrSet = null;
             for (int j=0; j<addresses.length; j++) {
                 Address a1 = addresses[j];
 
@@ -100,38 +100,21 @@ public class CreateOrComment extends AbstractMessageHandler {
                     e.printStackTrace();
                 }
 
-                adrSet.add((String) res);
-                System.out.println("Addr: " + res);
-            }
-            System.out.println(adrSet);
-//            Pattern pattern = Pattern.compile("<(.{1,100})>");
-//            Matcher matcher = pattern.matcher(addressConcatenated);
-//            String matched = null;
-//            while (matcher.find()) {
-//                matched = matcher.group(1);
-//                System.out.println(matched);
-//                if (!helpdesk.contains(matched)) {
-//                    break;
-//                }
-//            }
-
-            Iterator adrIt = adrSet.iterator();
-            while (adrIt.hasNext()) {
-                String adr = (String) adrIt.next();
-                System.out.println("Adr: " + adr);
-                System.out.println("AdrType" + adr.getClass().getName());
-                if (!(adr == null)) {
-                    i.setAssignee(UserUtils.getUserByEmail(adr));
-                    return i;
-                } else {
-                    i.setAssignee(i.getProjectObject().getLead());
-                    System.out.println("GetLead: " + i.getProjectObject().getLead() + "; " + i.getProjectObject().getLead().getClass().getName());
-                    return i;
+                if (!(res == null)) {
+                    System.out.println("Addr: " + res + "; AddrClass: " + res.getClass().getName());
+                    System.out.println("Compared with: " + helpdesk.get(0) + "; AddrClass: "
+                            + helpdesk.get(0).getClass().getName() + "; and etc..");
+                    if (!((res == helpdesk.get(0)) || (res == helpdesk.get(1)) || res == helpdesk.get(2))) {
+                        i.setAssignee(UserUtils.getUserByEmail((String) res));
+                    }
+                    else {
+                        System.out.println("GetLead: " + i.getProjectObject().getLead() + "; " + i.getProjectObject().getLead().getClass().getName());
+                        i.setAssignee(i.getProjectObject().getLead());
+                    }
                 }
             }
             return i;
         }
-
         public ChangeItemBean createAttachment(File file, String string, String string1, User user, Issue issue) throws AttachmentException {
             return this.mhc.createAttachment(file, string, string1, user, issue);
         }
