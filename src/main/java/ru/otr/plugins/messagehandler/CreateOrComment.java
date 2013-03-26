@@ -22,8 +22,6 @@ import com.atlassian.mail.MailUtils;
 
 import java.io.File;
 import java.io.IOException;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -31,7 +29,6 @@ import javax.mail.Address;
 import javax.mail.Message;
 import javax.mail.MessagingException;
 import javax.mail.Part;
-import javax.mail.internet.InternetAddress;
 
 public class CreateOrComment extends AbstractMessageHandler {
     public String projectKey;
@@ -79,42 +76,49 @@ public class CreateOrComment extends AbstractMessageHandler {
                 throw new CreateException("Не найдены получатели письма из поля TO", e);
             }
 
-            Set<Object> adrSet = null;
+            String addressConcatenated = "";
             for (int j=0; j<addresses.length; j++) {
-                Address a1 = addresses[j];
-
-                Class cl = a1.getClass().getSuperclass();
-                Method method;
-                try {
-                    method = cl.getDeclaredMethod("getAddress");
-                } catch (NoSuchMethodException e) {
-                    e.printStackTrace();
-                    throw new RuntimeException(e);
-                }
-                Object res = null;
-                try {
-                    res = method.invoke(a1);
-                } catch (IllegalAccessException e) {
-                    e.printStackTrace();
-                } catch (InvocationTargetException e) {
-                    e.printStackTrace();
-                }
-
-                if (!(res == null)) {
-                    System.out.println("Addr: " + res + "; AddrClass: " + res.getClass().getName());
-                    System.out.println("Compared with: " + helpdesk.get(0) + "; AddrClass: "
-                            + helpdesk.get(0).getClass().getName() + "; and etc..");
-                    if (!((res == helpdesk.get(0)) || (res == helpdesk.get(1)) || res == helpdesk.get(2))) {
-                        i.setAssignee(UserUtils.getUserByEmail((String) res));
-                    }
-                    else {
-                        System.out.println("GetLead: " + i.getProjectObject().getLead() + "; " + i.getProjectObject().getLead().getClass().getName());
-                        i.setAssignee(i.getProjectObject().getLead());
-                    }
+                addressConcatenated = addressConcatenated + "                                                  " +
+                        "                                                                                      "
+                        + addresses[j].toString();
+            }
+            Pattern pattern = Pattern.compile("<(.{1,100})>");
+            Matcher matcher = pattern.matcher(addressConcatenated);
+            String matched = null;
+            while (matcher.find()) {
+                matched = matcher.group(1);
+                System.out.println(matched);
+                if (!(helpdesk.get(0).equals(matched))&&!(helpdesk.get(1).equals(matched))&&!(helpdesk.get(2).equals(matched))
+                && (UserUtils.getUserByEmail(matched) != null)) {
+                    System.out.println("Current matched is: " + matched + "" +
+                            " мы его сравнивали с: " + helpdesk.get(0) + "; "
+                            + helpdesk.get(1) + "; "
+                            + helpdesk.get(2));
+                    break;
                 }
             }
-            return i;
+            System.out.println("helpdesk.get(0): " + helpdesk.get(0) + "; len: "  + helpdesk.get(0).length() + "; " + helpdesk.get(0).getClass().getName());
+            System.out.println("matched: " + matched + " len: " + matched.length() + " class: " + matched.getClass().getName());
+            System.out.println(matched.equals(helpdesk.get(0)));
+
+            if ((matched != null)) {
+                System.out.println("Мы наконец-то установили валидного assignee.");
+                User u = UserUtils.getUserByEmail(matched);
+                if (u == null) {
+                    System.out.println("Пустотень в UserUtils.getUserByEmail(matched)");
+                    i.setAssigneeId(i.getProjectObject().getLeadUserName());
+                    return i;
+                }
+                i.setAssignee(UserUtils.getUserByEmail(matched));
+                return i;
+            }
+            else {
+                System.out.println("Lead project: " + i.getProjectObject().getLeadUserName());
+                i.setAssigneeId(i.getProjectObject().getLeadUserName());
+                return i;
+            }
         }
+
         public ChangeItemBean createAttachment(File file, String string, String string1, User user, Issue issue) throws AttachmentException {
             return this.mhc.createAttachment(file, string, string1, user, issue);
         }
