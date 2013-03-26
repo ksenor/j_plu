@@ -6,7 +6,7 @@
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>ru.otr.plugins</groupId>
-    <artifactId>messagehandlerv2</artifactId>
+    <artifactId>messagehandler</artifactId>
     <version>1.2</version>
 
     <organization>
@@ -14,7 +14,7 @@
         <url>mailto:me@slie.ru</url>
     </organization>
 
-    <name>OTR Message Handler V2</name>
+    <name>OTR Message Handler</name>
     <description>This is the ru.otr.plugins:add-comment-to-issue plugin for Atlassian JIRA.</description>
     <packaging>atlassian-plugin</packaging>
 
@@ -66,6 +66,31 @@
             <artifactId>jira-func-tests</artifactId>
             <version>${jira.version}</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>mail</artifactId>
+            <version>1.4.4</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>mail</artifactId>
+            <version>1.4.4</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>mail</artifactId>
+            <version>1.4.4</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>mail</artifactId>
+            <version>1.4</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>mail</artifactId>
+            <version>1.4.4</version>
         </dependency>
     </dependencies>
 

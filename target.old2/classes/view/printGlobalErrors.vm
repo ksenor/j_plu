@@ -1,0 +1,9 @@
+#* @vtlvariable name="action" type="com.atlassian.jira.plugins.mail.webwork.MailWebActionSupport" *#
+<span class="global-errors-location">
+#if ($action.getHasErrorMessages())
+	#foreach ($error in $action.getFlushedErrorMessages())
+		#AUImessage("error" "" $textutils.htmlEncode(${error}) "" "" "" "false")
+		#set ($varTitleText = "")
+	#end
+#end
+</span>

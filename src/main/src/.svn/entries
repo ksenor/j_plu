@@ -1,0 +1,42 @@
+10
+
+dir
+0
+https://svn.otr.ru/repos/kausvn/db02/FTAS/jira-plugins/otrMessageHandler/src/main/src
+https://svn.otr.ru/repos/kausvn/db02
+add
+
+
+
+
+
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+d54a72dc-3782-4ef8-a21c-ed56fcd902eb
+
+main
+dir
+
+
+
+add
+
+test
+dir
+
+
+
+add
+

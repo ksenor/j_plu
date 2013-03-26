@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="target.old">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/target.old/messagehandler-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target.old/plugin_4559707792117343245_messagehandler-1.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

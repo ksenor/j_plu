@@ -1,4 +1,4 @@
-<atlassian-plugin key="ru.otr.plugins.messagehandlerv2" name="OTR Message Handler V2" plugins-version="2">
+<atlassian-plugin key="ru.otr.plugins.messagehandler" name="OTR Message Handler" plugins-version="2">
     <plugin-info>
         <description>This is the ru.otr.plugins:add-comment-to-issue plugin for Atlassian JIRA.</description>
         <version>1.2</version>

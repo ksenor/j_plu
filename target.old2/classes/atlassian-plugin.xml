@@ -1,0 +1,48 @@
+<atlassian-plugin key="ru.otr.plugins.messagehandlerv2" name="OTR Message Handler V2" plugins-version="2">
+    <plugin-info>
+        <description>This is the ru.otr.plugins:add-comment-to-issue plugin for Atlassian JIRA.</description>
+        <version>1.2</version>
+        <vendor name="Oboz Yuriy" url="mailto:me@slie.ru" />
+    </plugin-info>
+    <resource type="i18n" name="i18n" location="ru.otr.plugins.messagehandlerv2.messages"/>
+    <component name="Issue key validator" key="issue-key-validator" class="ru.otr.plugins.IssueKeyValidator"/>
+    <component name="Issue type validator" key="issue-type-validator" class="ru.otr.plugins.IssueTypeValidator"/>
+    <component name="User validator" key="user-validator" class="ru.otr.plugins.UserValidator"/>
+    <component name="Custom Field validator" key="cf-validator" class="ru.otr.plugins.CFValidator"/>
+    <message-handler i18n-name-key="handler.addcomment.name" key="AddCommentToIssue"
+        class="ru.otr.plugins.messagehandler.AddCommentToIssue"
+        add-edit-url="/secure/admin/EditAddCommentToIssueHandlerDetails!default.jspa" weight="0"/>
+    <message-handler i18n-name-key="handler.createsubtask.name" key="CreateSubTask"
+        class="ru.otr.plugins.messagehandler.CreateSubTask"
+        add-edit-url="/secure/admin/EditCreateSubTaskHandlerDetails!default.jspa" weight="0"/>
+    <message-handler i18n-name-key="handler.createorcommentv2.name" key="CreateOrCommentV2"
+        class="ru.otr.plugins.messagehandler.CreateOrComment"
+        add-edit-url="/secure/admin/EditCreateOrCommentHandlerDetails!default.jspa" weight="0"/>
+    <webwork1 key="edit-add-comment" name="Edit Add comment Handler" class="java.lang.Object">
+        <actions>
+            <action name="ru.otr.plugins.messagehandler.EditAddCommentToIssue"
+                alias="EditAddCommentToIssueHandlerDetails" roles-required="admin">
+                <view name="input">/view/editAddCommentToIssuenHandlerDetails.vm</view>
+                <view name="securitybreach">/secure/views/securitybreach.jsp</view>
+            </action>
+        </actions>
+    </webwork1>
+    <webwork1 key="edit-create-subtask" name="Edit Create SubTask Handler" class="java.lang.Object">
+        <actions>
+            <action name="ru.otr.plugins.messagehandler.EditCreateSubTask"
+                alias="EditCreateSubTaskHandlerDetails" roles-required="admin">
+                <view name="input">/view/editCreateSubTaskHandlerDetails.vm</view>
+                <view name="securitybreach">/secure/views/securitybreach.jsp</view>
+            </action>
+        </actions>
+    </webwork1>
+    <webwork1 key="edit-create-or-comment-v2" name="Edit Create or comment handler(with CC) V2" class="java.lang.Object">
+        <actions>
+            <action name="com.atlassian.jira.plugins.mail.webwork.EditHandlerDetailsWebAction"
+                alias="EditCreateOrCommentHandlerDetails" roles-required="admin">
+                <view name="input">/view/editCreateOrCommentHandlerDetails.vm</view>
+                <view name="securitybreach">/secure/views/securitybreach.jsp</view>
+            </action>
+        </actions>
+    </webwork1>
+</atlassian-plugin>

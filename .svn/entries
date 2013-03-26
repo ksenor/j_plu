@@ -26,21 +26,17 @@ oboz.yuriy
 
 d54a72dc-3782-4ef8-a21c-ed56fcd902eb
 
-src
-dir
-
-pom.xml
+LICENSE
 file
 
 
 
 
 2013-02-11T12:42:00.672615Z
-f57f9146622a0dfb7a1603a9e6ed165d
+ca4e40792721fb5ace350797abcb6197
 2013-02-08T09:41:06.884645Z
 1342
 oboz.yuriy
-has-props
 
 
 
@@ -61,7 +57,8 @@ has-props
 
 
 
-3600
+
+313
 
 README
 file
@@ -97,17 +94,25 @@ oboz.yuriy
 
 653
 
-LICENSE
+messagehandler.iml
+file
+0
+
+
+add
+
+pom.xml
 file
 
 
 
 
 2013-02-11T12:42:00.672615Z
-ca4e40792721fb5ace350797abcb6197
+f57f9146622a0dfb7a1603a9e6ed165d
 2013-02-08T09:41:06.884645Z
 1342
 oboz.yuriy
+has-props
 
 
 
@@ -128,6 +133,8 @@ oboz.yuriy
 
 
 
-
-313
+3600
+
+src
+dir
 
