@@ -35,9 +35,7 @@ public class AdvCreateIssueHandler extends CreateIssueHandler {
     @Override
     public void init(Map<String, String> params, MessageHandlerErrorCollector monitor) {
         super.init(params, monitor);
-        System.out.println(params);
-        //cfCC = "customfield_10370";
-        cfCC = "customfield_10000";
+        cfCC = "customfield_10370";
     }
 
 

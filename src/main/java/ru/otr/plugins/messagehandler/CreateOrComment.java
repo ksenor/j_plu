@@ -87,25 +87,15 @@ public class CreateOrComment extends AbstractMessageHandler {
             String matched = null;
             while (matcher.find()) {
                 matched = matcher.group(1);
-                System.out.println(matched);
                 if (!(helpdesk.get(0).equals(matched))&&!(helpdesk.get(1).equals(matched))&&!(helpdesk.get(2).equals(matched))
                 && (UserUtils.getUserByEmail(matched) != null)) {
-                    System.out.println("Current matched is: " + matched + "" +
-                            " мы его сравнивали с: " + helpdesk.get(0) + "; "
-                            + helpdesk.get(1) + "; "
-                            + helpdesk.get(2));
                     break;
                 }
             }
-            System.out.println("helpdesk.get(0): " + helpdesk.get(0) + "; len: "  + helpdesk.get(0).length() + "; " + helpdesk.get(0).getClass().getName());
-            System.out.println("matched: " + matched + " len: " + matched.length() + " class: " + matched.getClass().getName());
-            System.out.println(matched.equals(helpdesk.get(0)));
 
             if ((matched != null)) {
-                System.out.println("Мы наконец-то установили валидного assignee.");
                 User u = UserUtils.getUserByEmail(matched);
                 if (u == null) {
-                    System.out.println("Пустотень в UserUtils.getUserByEmail(matched)");
                     i.setAssigneeId(i.getProjectObject().getLeadUserName());
                     return i;
                 }
@@ -113,7 +103,6 @@ public class CreateOrComment extends AbstractMessageHandler {
                 return i;
             }
             else {
-                System.out.println("Lead project: " + i.getProjectObject().getLeadUserName());
                 i.setAssigneeId(i.getProjectObject().getLeadUserName());
                 return i;
             }

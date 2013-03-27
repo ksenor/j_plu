@@ -1,5 +1,0 @@
-#set ($modifierKey = $action.browserUtils.getModifierKey())
-#set ($submitAccessKey = $i18n.getText('AUI.form.submit.button.accesskey'))
-#set ($submitTitle = $i18n.getText('AUI.form.submit.button.tooltip', [$submitAccessKey, $modifierKey]))
-
-#set ($cancelAccessKey = $i18n.getText('AUI.form.cancel.link.accesskey'))

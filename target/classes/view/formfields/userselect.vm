@@ -1,4 +1,0 @@
-#parse("/view/formfields/aui.vm")
-#parse("/view/formfields/normalHeader.vm")
-#parse("/view/simple/userselect.vm")
-#parse("/view/formfields/normalFooter.vm")

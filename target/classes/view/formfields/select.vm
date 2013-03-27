@@ -1,7 +1,0 @@
-#parse("/view/formfields/aui.vm")
-#parse("/view/formfields/normalHeader.vm")
-#if (!$auiparams.containsKey('class'))
-	#set ($auiparams.class = "select")
-#end
-#parse("/view/simple/select.vm")
-#parse("/view/formfields/normalFooter.vm")
